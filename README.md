@@ -4,23 +4,19 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|name|string|null: false|
-|group_id|integer|null: false, foreign_key: true|
+|username|string|null: false|
 ### Association
 - has_many :posts
-- has_many :groups
-- belongs_to :group
+- has_many :groups, through:  :groups_users
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|groupsname|string|null: false|
 ### Association
 - has_many :posts
-- has_many :users
-- belongs_to :user
+- has_many :users, through:  :groups_users
 
 ## groups_usersテーブル
 
