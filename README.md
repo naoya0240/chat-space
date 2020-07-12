@@ -4,7 +4,7 @@
 |------|----|-------|
 |email|string|null: false, unique: true|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :posts
 - has_many :groups_users
@@ -14,7 +14,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|groupsname|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 ### Association
 - has_many :posts
 - has_many :groups_users
