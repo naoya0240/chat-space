@@ -1,7 +1,29 @@
 .main-chat
   .main-chat__group-info
-    
+    .top-text
+      test
+      .top-member
+        Member : masa
+
+    .top-edit
+    =link_to "#" do
+      edit
+
   .main-chat__message__list
-    
-  .main-chat__message-form
-    
+    .list-name
+      masa
+      .list-text
+        おはよう！
+
+    .list-name
+      masa
+      .list-text
+        今日は夜から雨
+  .form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message" }
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
