@@ -33,20 +33,31 @@
       }
     }
 
-    .main-chat__message__list {
+    .main-chat__list {
       background-color: #fafafa;
-      height: calc(100vh - 100px - 90px);
-      padding-top: 35px;
-      &__name {
+      height: calc(100vh - 190px);
+      padding: 35px 40px 0px;
+    }
+    .MessageBox{
+      margin-bottom: 46px;
+    }
+    .MessageInfo {
+      display: flex;
+      &__userName {
         color: #333333;
         font-size: 16px;
-        margin-bottom: 46px;
-        &__text {
-          margin-top: 12px;
-          color: #434A54;
-          font-size: 14px;
-        }
+        font-weight: bold;
       }
+      &__date {
+        padding-left: 10px;
+        color: #999;
+        font-size: 12px;  
+      }
+    }
+    .Message {
+      margin-top: 12px;
+      color: #434A54;
+      font-size: 14px;
     }
 
     .main-chat__message-form {
@@ -65,7 +76,7 @@
             width: 100%;
             color: #434a54;
             border-style: none;
-            padding: 0 0px 0 10px;
+            padding: 0 45px 0 15px;
           }
           &__image {
             position: absolute;
