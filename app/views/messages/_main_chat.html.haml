@@ -1,13 +1,15 @@
 .main-chat
-  .main-chat__group-info
-    .main-chat__group-info__text
-      =@group.name
-      .main-chat__group-info__text__member
-      - @group.users.each do |user|
-        =user.name
+  .main-chat__header
+    .main-chat__header__group-info
+      .main-chat__header__group-info__text
+        =@group.name
+      .main-chat__header__group-info__member-list
+        Member：
+        .main-chat__header__group-info__member-list__member
+          - @group.users.each do |user|
+            =user.name
 
-    .main-chat__group-info__edit
-      =link_to 'Edit',edit_group_path(@group)
+    =link_to 'Edit',edit_group_path(@group), class: "main-chat__header__group-info__edit"
 
   .main-chat__list
     = render @messages

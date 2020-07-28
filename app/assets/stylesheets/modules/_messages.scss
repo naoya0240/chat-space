@@ -9,31 +9,44 @@
   .main-chat {
     width: calc(100vw - 300px);
 
-    .main-chat__group-info {
+    &__header{
       background-color: #ffffff;
       height: 100px;
       padding: 0px 40px 0px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      &__text{
-        color: #333333;
-        font-size: 20px;
-        margin-top: 35px;
-        &__member {
-          color: #999999;
-          font-size: 12px;
+      &__group-info{
+        .main-chat__header__group-info__text{
+          color: #333333;
+          font-size: 20px;
+          margin-top: 35px;
+        }
+        &__member-list {
+          display: flex;
           margin-top: 15px;
+          font-size: 12px;
+          color: #999;
+
+          &__member{
+            color: #999999;
+            font-size: 13px;
+            padding-right: 5px;
+          }
         }
       }
-      &__edit {
-        margin: 28px 20px;
+      .main-chat__header__group-info__edit {
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
         color: #38aef0;
         font-size: 16px;
+        text-decoration: none;
+        border: 1px solid #38AEF0;
       }
     }
 
-    .main-chat__list {
+    &__list {
       background-color: #fafafa;
       height: calc(100vh - 190px);
       padding: 35px 40px 0px;
@@ -96,6 +109,7 @@
           padding: 0 30px;
           margin-left: 15px;
           background-color: #38aef0;
+          border: none;
           color: white;
           cursor: pointer;
         }
@@ -139,16 +153,19 @@
       height: calc(100vh - 100px);
       background-color: #2f3e51;
       padding: 0px 20px 0px 20px;
-      &__message{
-        color: #ffffff;
+      .side-bar__group-list__message{
         font-weight: bold;
         padding: 20px 0px 40px 0px;
-        &__groups{
+        .side-bar__group-list__message__groups{
           font-size: 15px;
           margin-bottom: 5px;
         }
-        &__comments{
+        .side-bar__group-list__message__comments{
           font-size: 11px;
+        }
+        a{
+          text-decoration: none;
+          color: white;
         }
       }
     }
