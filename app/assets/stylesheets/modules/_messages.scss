@@ -50,6 +50,7 @@
       background-color: #fafafa;
       height: calc(100vh - 190px);
       padding: 35px 40px 0px;
+      overflow: scroll;
     }
     .MessageBox{
       margin-bottom: 46px;
@@ -86,8 +87,7 @@
           position: relative;
           &__text {
             height: 50px;
-            width: 100%;
-            color: #434a54;
+            width: calc(100vw - 500px);
             border-style: none;
             padding: 0 45px 0 15px;
           }
