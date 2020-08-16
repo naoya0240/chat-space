@@ -62,8 +62,9 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
-        $('.MessageField').append(insertHTML);
-        $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
+        $('.main-chat__list').append(insertHTML);
+        $('.main-chat__list').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
+        
       }
     })
     .fail(function() {
